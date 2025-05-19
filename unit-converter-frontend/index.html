@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        
+        <div class="converter-card">
+            <div class="converter-header">
+                <select id="conversion-type">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                </select>
+            </div>
+            
+            <div class="converter-body">
+                <div class="input-group">
+                    <input type="number" id="input-value" placeholder="Enter value">
+                    <select id="from-unit"></select>
+                </div>
+                
+                <div class="swap-icon" id="swap-units">
+                    <span>⇄</span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="number" id="result-value" readonly>
+                    <select id="to-unit"></select>
+                </div>
+            </div>
+            
+            <div class="converter-footer">
+                <button id="convert-btn">Convert</button>
+            </div>
+        </div>
+        
+        <div id="history-container">
+            <h2>Conversion History</h2>
+            <div id="conversion-history"></div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
