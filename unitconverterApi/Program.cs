@@ -22,9 +22,14 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "Unit Converter API",
         Version = "v1",
-        Description = "An API for converting between different units of measurement"
+        Description = "An API for converting between different units of measurement",
+        License = new Microsoft.OpenApi.Models.OpenApiLicense 
+        { 
+            Name = "MIT License", 
+            Url = new Uri("https://opensource.org/licenses/MIT") 
+        }
     });
-    
+
     // Set the comments path for the Swagger JSON and UI
     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
